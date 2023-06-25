@@ -1,13 +1,202 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    background-color: #d2eee0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* grid-column: 2 / 3; */
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.form-container > form {
+    display: flex;
+    align-items: flex-end;
+}
+
+@media screen and (max-width:441px) {
+    .form-container > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-div {
+        margin-top: .8rem;
+    }
+}
+
+.task-input {
+    margin-top: 1rem;
+    height: 2rem;
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: .3rem 0rem .3rem;
+
+}
+
+@media screen and (max-width:441px) {
+    .task-input {
+        min-width: 50%;
+    }
+
+}
+
+.task-btn {
+    padding: .5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: .5rem;
+    border-radius: .3rem 0rem .3rem;
+}
+
+.add {
+    background-color: #1ae094;
+}
+
+.add:hover {
+    background-color: #23c587;
+}
+
+.cancel {
+    background-color: #fa7d7d;
+}
+
+.cancel:hover {
+    background-color: #f16b6b;
+}
+
+.create-btn {
+    padding: .5rem;
+    font-size: 1.3rem;
+    background-color: #fff;
+    border: 1px solid black;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+    border-radius: .3rem 0rem .3rem;
+    transition: background-color .2s ease-in-out;
+}
+
+.create-btn:hover {
+    background-color: #1f1f35;
+    border: 1px solid black;
+    color: #fff;
+}
+
+.create-btn > svg {
+    margin-left: .5rem;
+}
+
+/* .completed {
+    background-color: #46b3f3;
+}
+
+.edit {
+    background-color: #23c587;
+}
+
+.delete {
+    background-color: #f16b6b;
+} */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task {
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.task > li {
+    display: flex;
+    list-style: none;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    /* cursor: pointer; */
+}
+/* 
+@media screen and (max-width: 380px) {
+    .task > li {
+        min-width: 50%;
+
+    }
+} */
+.task > li:hover {
+    background-color: #b9addd;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.task > li > input {
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    width: 65%;
+    cursor: pointer;
+    caret-color: transparent;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+    .task > li > input {
+        width: 50%;
+        font-size: 1.2rem;
+
+    }
+    
+}
+
+/* .task > li > input:hover {
+    background-color: transparent;
+} */
+
+.task > li > div > button {
+    margin-left: .5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 395px) {
+    .header h1 {
+        font-size: 2rem;
+        font-family: 'Orbitron', sans-serif;
+    }
+
 }
